@@ -36,4 +36,18 @@ p,h1,h2{
     background: #fdf2df;
 }
 
+@media (max-width: 300px) {
+  #container {
+  flex-direction: column;
+}
+.Cuadro {
+  align-content: center; 
+  text-align: center; 
+}
+}
 
+#barbie{
+  align-self: flex-start;
+  flex-grow: 2;
+  order: 1;
+}
