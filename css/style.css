@@ -21,6 +21,7 @@ h1 {
 
 p, h2 {
     text-align: center;
+    margin: 4px ;
 }
 
 #Cajas {
@@ -58,7 +59,6 @@ p, h2 {
 }
 
 .CajaGrande1 fieldset {
-
     order: 2;
 }
 
