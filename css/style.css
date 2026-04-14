@@ -17,12 +17,10 @@ h1 {
 .imagen {
     width: 200px;
     height: 200px;
-    display: block;
-    margin: 10px auto;
 }
 
 p, h2 {
-    text-align: justify;
+    text-align: center;
 }
 
 #Cajas {
@@ -30,7 +28,7 @@ p, h2 {
     flex-wrap: wrap; 
     margin: 1px auto;
     padding: 20px;
-    gap: 20px;
+    gap: 20px; 
 }
 
 .CajaGrande,
@@ -39,40 +37,67 @@ p, h2 {
     padding: 20px;
     border-radius: 20px;
     background: #fdf2df;
+    
 }
 
 .CajaGrande {
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* permite que el título suba */
+    align-items: center;
+    gap: 20px;
+}
+
+.CajaGrande h2 {
+    width: 100%;   
+    order: 1;
+}
+.CajaGrande p {
+    flex: 1;
+    order: 3;
+}
+
+.CajaGrande fieldset {
+    order: 2;
 }
 
 .CajaMitad {
     width: calc(50% - 10px);
 }
 
-@media (max-width: 600px) {
-    #Cajas{
-        flex-direction: column; 
+    @media (max-width: 600px) {
+        #Cajas{
+            flex-direction: column; 
+        }
+
+        .CajaMitad,
+        .CajaGrande{
+            width: 100%; 
+        }
+        .imagen {
+            width: 100%;
+            height: auto;
+        }
     }
 
-    .CajaMitad,
-    .CajaGrande{
-        width: 100%; 
-    }
-}
-@media (min-width: 979px) {
-    #Cajas{
-        flex-direction: row;   
-        flex-wrap: nowrap;  
+    @media (min-width: 979px) {
+        #Cajas{
+            flex-direction: row;   
+            flex-wrap: nowrap;  
+            
+        }
+
+        .CajaMitad,
+        .CajaGrande{
+            width: 33.33%;        
+        }
+         .imagen {
+            width: 100%;
+            height: auto;
+        }
     }
 
-    .CajaMitad,
-    .CajaGrande{
-        width: 33.33%;        
-    }
-}
 
 #titulo {  
     border-top: #000000 solid 1px;
     border-bottom: #000000 solid 1px;
 }
-
