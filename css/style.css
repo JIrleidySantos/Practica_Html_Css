@@ -28,6 +28,8 @@ p, h2 {
 #Cajas {
     display: flex;
     flex-wrap: wrap; 
+    margin: 1px auto;
+    padding: 20px;
     gap: 20px;
 }
 
@@ -67,5 +69,10 @@ p, h2 {
     .CajaGrande{
         width: 33.33%;        
     }
+}
+
+#titulo {  
+    border-top: #000000 solid 1px;
+    border-bottom: #000000 solid 1px;
 }
 
