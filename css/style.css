@@ -31,8 +31,8 @@ p, h2 {
     gap: 20px; 
 }
 
-.CajaGrande,
-.CajaMitad {
+.CajaGrande1,
+.CajaMitad1,.CajaMitad2 {
     border: 2px solid #f2d5a2;
     padding: 20px;
     border-radius: 20px;
@@ -40,27 +40,29 @@ p, h2 {
     
 }
 
-.CajaGrande {
+.CajaGrande1 {
     display: flex;
-    flex-wrap: wrap; /* permite que el título suba */
+    flex-wrap: wrap; 
     align-items: center;
     gap: 20px;
+    order: 3;
 }
 
-.CajaGrande h2 {
+.CajaGrande1 h2 {
     width: 100%;   
     order: 1;
 }
-.CajaGrande p {
+.CajaGrande1 p {
     flex: 1;
     order: 3;
 }
 
-.CajaGrande fieldset {
+.CajaGrande1 fieldset {
+
     order: 2;
 }
 
-.CajaMitad {
+.CajaMitad1, .CajaMitad2 {
     width: calc(50% - 10px);
 }
 
@@ -69,8 +71,8 @@ p, h2 {
             flex-direction: column; 
         }
 
-        .CajaMitad,
-        .CajaGrande{
+        .CajaMitad1, .CajaMitad2,
+        .CajaGrande1{
             width: 100%; 
         }
         .imagen {
@@ -86,13 +88,17 @@ p, h2 {
             
         }
 
-        .CajaMitad,
-        .CajaGrande{
+        .CajaMitad1, .CajaMitad2,
+        .CajaGrande1{
             width: 33.33%;        
         }
          .imagen {
             width: 100%;
             height: auto;
+        }
+        .CajaGrande1 h2 {
+            width: 100%;
+            order: 3;   
         }
     }
 
