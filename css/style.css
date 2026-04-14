@@ -1,53 +1,71 @@
-*{
+* {
+    box-sizing: border-box;
+    font-family: Garamond, Georgia, serif;
+    margin: 0px;
+}
+
+#Container {
     background: #ffffff;
-    font-family: Garamond,Georgia, serif;
-    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagen {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 10px auto;
+}
+
+p, h2 {
     text-align: justify;
 }
-#Container{
+
+#Cajas {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 400px;
+    flex-wrap: wrap; 
+    gap: 20px;
 }
 
-.Cuadro{
+.CajaGrande,
+.CajaMitad {
     border: 2px solid #f2d5a2;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 20px;
     background: #fdf2df;
-    box-sizing: border-box;
-}
-h1{
-    text-align: center;
 }
 
-p,h1,h2{
-    background: #fdf2df;
+.CajaGrande {
+    width: 100%;
 }
 
-.imagen{
-    width: 200px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    background: #fdf2df;
+.CajaMitad {
+    width: calc(50% - 10px);
 }
 
-@media (max-width: 300px) {
-  #container {
-  flex-direction: column;
+@media (max-width: 600px) {
+    #Cajas{
+        flex-direction: column; 
+    }
+
+    .CajaMitad,
+    .CajaGrande{
+        width: 100%; 
+    }
 }
-.Cuadro {
-  align-content: center; 
-  text-align: center; 
-}
+@media (min-width: 979px) {
+    #Cajas{
+        flex-direction: row;   
+        flex-wrap: nowrap;  
+    }
+
+    .CajaMitad,
+    .CajaGrande{
+        width: 33.33%;        
+    }
 }
 
-#barbie{
-  align-self: flex-start;
-  flex-grow: 2;
-  order: 1;
-}
